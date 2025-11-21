@@ -54,3 +54,102 @@ Recommended Termux packages:
 ```bash
 pkg update && pkg upgrade -y
 pkg install -y bash nmap curl iproute2 nano
+
+---
+
+🚀 Installation
+
+Download the script directly:
+
+cd ~
+curl -O https://raw.githubusercontent.com/xbustcodex/DroidRecon-Toolkit-v1.0/main/droidrecon.sh
+chmod +x droidrecon.sh
+
+Run it:
+
+bash droidrecon.sh
+
+Optional alias (so you can just type droidrecon):
+
+echo 'alias droidrecon="bash ~/droidrecon.sh"' >> ~/.bashrc
+source ~/.bashrc
+
+Then:
+
+droidrecon
+
+inside Termux.
+
+
+---
+
+📂 Reports & Notes
+
+All scan output and notes are stored under:
+
+~/droidrecon_reports
+
+Example structure:
+
+droidrecon_reports/
+├── htb_box1/
+│   ├── nmap_20251121_133000.txt
+│   └── notes.txt
+└── lab_wifi/
+    ├── nmap_20251121_140500.txt
+    └── notes.txt
+
+Each project gets its own folder
+
+Each scan = nmap_<timestamp>.txt
+
+Notes = notes.txt opened via menu
+
+
+
+---
+
+⚖ Legal Disclaimer
+
+This toolkit is provided for educational and authorized security testing only.
+
+By using DroidRecon, you agree that you will:
+
+✅ Only scan networks/hosts you own or are explicitly allowed to test
+
+✅ Comply with your local laws and regulations
+
+✅ Accept full responsibility for your actions
+
+
+The author is not responsible for any misuse or damage caused by this tool.
+
+
+---
+
+💰 Monetization Idea
+
+You can use DroidRecon as part of a paid recon / hardening / health-check service for clients you have permission to test, for example:
+
+Small business network health checks
+
+Home router / IoT review
+
+CTF / lab training / mentoring
+
+
+Combine it with proper reporting and you have a legit freelance service.
+
+
+---
+
+🛠 Roadmap
+
+JSON export of scan summaries
+
+Simple HTML report generator
+
+Integration with PC-side tooling via SSH
+
+
+PRs, forks and custom builds are welcome — just keep it legal. 😉
